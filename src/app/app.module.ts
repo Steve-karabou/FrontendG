@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PatientsModule } from './patients/patients.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { PatientsModule } from './patients/patients.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PatientsModule
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
