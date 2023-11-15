@@ -1,0 +1,26 @@
+.row1, .row2{
+    display: flex;
+    margin: 3%;
+}
+
+.row1 .col-5{
+    margin-right: 3%;
+}
+
+.row2 .col-2{
+    background-color: red;
+    height: 30rem;
+}
+.row2 .button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.row2 .button .failed{
+    padding: 0.3rem 1.8rem;
+}
+.row2 .col-8{
+    background-color: blue;
+    height: 30rem;
+}

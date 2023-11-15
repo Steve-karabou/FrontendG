@@ -44,7 +44,7 @@
     <div class="col-md-6">
       <label for="package_id" class="form-label">ID Package</label>
       <select class="form-select" formControlName="package_id" aria-label=".form-select-lg example">
-        <option *ngFor="let package of packages" [value]="package._id"> {{package.to_name}} </option>
+        <option *ngFor="let package of packages" [value]="package.package_id"> {{package.to_name}} </option>
       </select>
       <small class="text-danger" *ngIf="deliveryFormGroup.controls['package_id'].errors && deliveryFormGroup.controls['package_id'].touched">
         {{ this.adminService.getErrorMessage("Status", deliveryFormGroup.controls['package_id'].errors)}}

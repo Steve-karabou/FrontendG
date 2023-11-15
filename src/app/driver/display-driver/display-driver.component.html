@@ -1,0 +1,48 @@
+<div class="row1">
+    <div class="col-5"> 
+        <!-- <form [formGroup]="searchFormGroup"> 
+         <div class="input-group input-size ms-2">
+           <input type="text" class="form-control" placeholder="Enter Delivery ID" formControlName="name" aria-describedby="button-addon2">
+         </div>
+       </form>   -->
+    </div>
+    <div class="col-2">
+      <button type="submit" class="btn btn-primary" (click)="searchDeliveryPackage()"
+       [disabled]="searchFormGroup.invalid">Submit</button>
+    </div>
+</div>
+<div class="row2">
+ <div class="col-2">
+  <div>
+    <h4>Package Details</h4>
+    <ul>
+      <li>Karabou</li>
+      <li>Karabou</li>
+      <li>Karabou</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Package Details</h4>
+    <ul>
+      <li>Karabou</li>
+      <li>Karabou</li>
+      <li>Karabou</li>
+    </ul>
+  </div>
+ </div>
+ <div class="col-8">qffqfqqqqqqfs</div>
+ <div class="col-2 button">
+  <div class="col-6">
+    <button type="submit" class="btn btn-primary" (click)="pickedUp()">Picked Up</button>
+  </div>
+  <div class="col-6">
+    <button type="submit" class="btn btn-primary" (click)="inTransit()">In-Transit</button>
+  </div>
+  <div class="col-6">
+    <button type="submit" class="btn btn-primary" (click)="deliveredt()">Delivered</button>
+  </div>
+  <div class="col-6">
+    <button type="submit" class="btn btn-primary failed"(click)="failed()" >Failed</button>
+  </div>
+ </div>
+</div>

@@ -8,7 +8,7 @@ import { Observer } from 'rxjs';
 })
 export class AdminService {
 
-  private readonly apiUrl: string = 'http://localhost:5000/api';
+  private readonly apiUrl: string = 'http://localhost:3000/api';
 
   constructor(private http: HttpClient) { }
 
