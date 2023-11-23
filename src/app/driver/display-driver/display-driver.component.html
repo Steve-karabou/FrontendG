@@ -1,36 +1,44 @@
-<div class="row1">
+
+<div id="driver">
+  <div class="row1">
     <div class="col-5"> 
-        <!-- <form [formGroup]="searchFormGroup"> 
+        <form [formGroup]="searchFormGroup"> 
          <div class="input-group input-size ms-2">
-           <input type="text" class="form-control" placeholder="Enter Delivery ID" formControlName="name" aria-describedby="button-addon2">
+           <input type="text" class="form-control" placeholder="Enter Delivery ID" formControlName="deliveryId" aria-describedby="button-addon2">
          </div>
-       </form>   -->
+       </form>  
     </div>
     <div class="col-2">
-      <button type="submit" class="btn btn-primary" (click)="searchDeliveryPackage()"
-       [disabled]="searchFormGroup.invalid">Submit</button>
+      <button type="submit" class="btn btn-primary" (click)="searchDeliveryPackage()" 
+      [disabled]="searchFormGroup.invalid">Submit</button>
     </div>
 </div>
 <div class="row2">
- <div class="col-2">
+ <div class="col-3">
   <div>
     <h4>Package Details</h4>
     <ul>
-      <li>Karabou</li>
-      <li>Karabou</li>
-      <li>Karabou</li>
+      <li>Pickup Time: <span>{{deliveryPackage?.pickup_time | date:"dd/MM/yyy, h:mm:ss" }}</span></li>
+      <li>Start Time: <span>{{deliveryPackage?.start_time | date:"dd/MM/yyy, h:mm:ss"}}</span></li>
+      <li>End Time: <span>{{deliveryPackage?.end_time | date:"dd/MM/yyy, h:mm:ss"}}</span></li>
+      <li>Status: <span>{{deliveryPackage?.status}}</span></li>
     </ul>
   </div>
   <div>
     <h4>Package Details</h4>
     <ul>
-      <li>Karabou</li>
-      <li>Karabou</li>
-      <li>Karabou</li>
+      <li>From Name: <span>{{deliveryPackage?.package[0].from_name }}</span></li>
+      <li>From Address: <span>{{deliveryPackage?.package[0].from_address}}</span></li>
+      <li>To Name: <span>{{deliveryPackage?.package[0].to_name}}</span></li>
+      <li>To Address: <span>{{deliveryPackage?.package[0].to_address}}</span></li>
+      <li>Weight: <span>{{deliveryPackage?.package[0].weight}}</span></li>
+      <li>Width: <span>{{deliveryPackage?.package[0].width}}</span></li>
+      <li>Height: <span>{{deliveryPackage?.package[0].height}}</span></li>
+      <li>Depth: <span>{{deliveryPackage?.package[0].depth}}</span></li>
     </ul>
   </div>
  </div>
- <div class="col-8">qffqfqqqqqqfs</div>
+ <div class="col-7"> <div id="map"></div></div>
  <div class="col-2 button">
   <div class="col-6">
     <button type="submit" class="btn btn-primary" (click)="pickedUp()">Picked Up</button>
@@ -45,4 +53,5 @@
     <button type="submit" class="btn btn-primary failed"(click)="failed()" >Failed</button>
   </div>
  </div>
+</div>
 </div>

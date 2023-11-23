@@ -7,10 +7,18 @@
     margin-right: 3%;
 }
 
+span{
+    color: blue;
+}
 .row2 .col-2{
-    background-color: red;
+    /* background-color: red; */
     height: 30rem;
 }
+
+ #map { 
+    height: 100%; 
+    } 
+
 .row2 .button{
     display: flex;
     flex-direction: column;
@@ -20,7 +28,7 @@
 .row2 .button .failed{
     padding: 0.3rem 1.8rem;
 }
-.row2 .col-8{
+.row2 .col-7{
     background-color: blue;
     height: 30rem;
 }
