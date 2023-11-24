@@ -1,0 +1,26 @@
+#driver{
+   height: 100vh;
+   background-color: aquamarine;
+   padding-left: 2%;
+}
+.row1, .row2{
+    display: flex;
+    margin: 3%;
+}
+
+.row1 .col-5{
+    margin-right: 3%;
+}
+
+span{
+    color: blue;
+}
+
+#map { 
+    height: 100%; 
+    } 
+
+.col-8{
+    background-color: blue;
+    height: 30rem;
+}

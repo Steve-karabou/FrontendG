@@ -71,10 +71,6 @@ export class DisplayDriverComponent implements OnInit{
     });
   }
 
-  ngOnDestroy() {
-  
-  }
-
   pickedUp(){
     let data = {status: "picked-up", id: this.deliveryPackage._id}
    this.driverService.statusChange(data)
@@ -102,7 +98,7 @@ export class DisplayDriverComponent implements OnInit{
         this.deliveryPackage = data[0];
              
        if(this.deliveryPackage?.package[0].to_location.lat && this.deliveryPackage?.package[0].to_location.lng){
-         console.log("to_location:", this.deliveryPackage.package[0].to_location);
+          console.log("to_location:", this.deliveryPackage.package[0].to_location);
          let greenIcon = new L.Icon({
           iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
           shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -114,14 +110,23 @@ export class DisplayDriverComponent implements OnInit{
         let packageSource = L.marker([this.deliveryPackage?.package[0].to_location.lat, this.deliveryPackage?.package[0].to_location.lng], 
           {icon: greenIcon}).addTo(this.map).bindPopup("<b>package source</b><br>.");
        }
+
+       if(this.deliveryPackage?.package[0].from_location.lat && this.deliveryPackage?.package[0].from_location.lng){
+        console.log("to_location:", this.deliveryPackage.package[0].from_location);
+       let greenIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+        });
+      let packageFrom = L.marker([this.deliveryPackage?.package[0].from_location.lat, this.deliveryPackage?.package[0].from_location.lng], 
+        {icon: greenIcon}).addTo(this.map).bindPopup("<b>package From</b><br>.");
+     }
   
       }
      })
-    //  console.log("Package:",this.deliveryPackage)
-    //  if(this.deliveryPackage?.package[0]){
-    //   // console.log("latitude:", this.deliveryPackage.package[0].to_location.lat);
-    //   // console.log("lngitude:", this.deliveryPackage.package[0].to_location.lng);
-    // }
   }
    
   }

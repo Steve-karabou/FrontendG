@@ -1,0 +1,43 @@
+
+<div id="driver">
+    <div class="row1">
+      <div class="col-5"> 
+          <form [formGroup]="searchFormGroup"> 
+           <div class="input-group input-size ms-2">
+             <input type="text" class="form-control" placeholder="Enter Delivery ID" formControlName="packageId" aria-describedby="button-addon2">
+           </div>
+         </form>  
+      </div>
+      <div class="col-2">
+        <button type="submit" class="btn btn-primary" (click)="searchPackageDelivery()" 
+        [disabled]="searchFormGroup.invalid">Submit</button>
+      </div>
+  </div>
+  <div class="row2">
+   <div class="col-4">
+    <div>
+      <h4>Package Details</h4>
+      <ul>
+        <li>Pickup Time: <span>{{packageDelivery?.delivery[0].pickup_time | date:"dd/MM/yyy, h:mm:ss" }}</span></li> 
+        <li>Start Time: <span>{{packageDelivery?.delivery[0].start_time | date:"dd/MM/yyy, h:mm:ss"}}</span></li>
+        <li>End Time: <span>{{packageDelivery?.delivery[0].end_time | date:"dd/MM/yyy, h:mm:ss"}}</span></li>
+        <li>Status: <span>{{packageDelivery?.delivery[0].status}}</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Package Details</h4>
+      <ul>
+         <li>From Name: <span>{{packageDelivery?.from_name }}</span></li>
+        <li>From Address: <span>{{packageDelivery?.from_address}}</span></li>
+        <li>To Name: <span>{{packageDelivery?.to_name}}</span></li>
+        <li>To Address: <span>{{packageDelivery?.to_address}}</span></li>
+        <li>Weight: <span>{{packageDelivery?.weight}}</span></li>
+        <li>Width: <span>{{packageDelivery?.width}}</span></li>
+        <li>Height: <span>{{packageDelivery?.height}}</span></li>
+        <li>Depth: <span>{{packageDelivery?.depth}}</span></li>
+      </ul>
+    </div>
+   </div>
+   <div class="col-8"> <div id="map"></div></div>
+  </div>
+  </div>

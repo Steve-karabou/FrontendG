@@ -1,3 +1,8 @@
+#driver{
+    height: 100vh;
+    background-color: aquamarine;
+    padding-left: 2%;
+ }
 .row1, .row2{
     display: flex;
     margin: 3%;

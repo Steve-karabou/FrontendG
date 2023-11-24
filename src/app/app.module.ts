@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminModule } from './admin/admin.module';
 import { DriverModule } from './driver/driver.module';
+import { TrackerModule } from './tracker/tracker.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { DriverModule } from './driver/driver.module';
     AppRoutingModule,
     AdminModule,
     DriverModule,
+    TrackerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
